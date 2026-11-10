@@ -1,7 +1,7 @@
 #!/bin/bash
-# Installs (or updates) Job Search for Designers.
+# Installs (or updates) Product Design Job Finder.
 #
-#   curl -fsSL https://raw.githubusercontent.com/eriklevitch/job-search-for-designers/main/install.sh | bash
+#   curl -fsSL https://raw.githubusercontent.com/eriklevitch/product-design-job-finder/main/install.sh | bash
 #
 # What it does, in order:
 #   1. Checks that Python 3.10 or newer is installed.
@@ -12,14 +12,14 @@
 #   4. Starts the setup questions.
 set -e
 
-REPO="${JOBSEARCH_REPO:-eriklevitch/job-search-for-designers}"
+REPO="${JOBSEARCH_REPO:-eriklevitch/product-design-job-finder}"
 DEST="${JOBSEARCH_DIR:-$HOME/job-search}"
 # For testing: copy from a local folder instead of downloading.
 LOCAL_SOURCE="${JOBSEARCH_SOURCE_DIR:-}"
 
 bold() { printf "\n\033[1m%s\033[0m\n" "$1"; }
 
-bold "Job Search for Designers: installing"
+bold "Product Design Job Finder: installing"
 
 # 1. Python ---------------------------------------------------------
 PY=""

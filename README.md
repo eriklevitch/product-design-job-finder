@@ -1,4 +1,4 @@
-# Job Search for Designers
+# Product Design Job Finder
 
 **A weekly job finder for product designers.** It checks job boards and the careers pages of companies you choose, keeps the roles that fit your level, location and pay, and adds them to one tracker. Optionally, it also drafts tailored resume bullets and a cover letter opening for each job.
 
@@ -49,7 +49,7 @@ Applied           Initech   Design Manager, Platform         Remote - US  $200,0
 2. Copy this line, paste it into Terminal, and press **Return**:
 
    ```
-   curl -fsSL https://raw.githubusercontent.com/eriklevitch/job-search-for-designers/main/install.sh | bash
+   curl -fsSL https://raw.githubusercontent.com/eriklevitch/product-design-job-finder/main/install.sh | bash
    ```
 
 3. Answer the five questions. Press **Return** to accept the suggestion shown in [brackets].
@@ -221,7 +221,7 @@ Drag the job-search folder to the Trash. Nothing else was installed.
 Needs Python 3.10+.
 
 ```
-git clone https://github.com/eriklevitch/job-search-for-designers.git job-search
+git clone https://github.com/eriklevitch/product-design-job-finder.git job-search
 cd job-search
 python3 -m venv venv
 venv/bin/pip install -r requirements.txt        # Windows: venv\Scripts\pip install -r requirements.txt
