@@ -1,8 +1,6 @@
 # Product Design Job Finder
 
-**A weekly job finder for product designers.** It checks job boards and the careers pages of companies you choose, keeps the roles that fit your level, location and pay, and adds them to one tracker. Optionally, it also drafts tailored resume bullets and a cover letter opening for each job.
-
-You stay in control: you review every job and apply yourself.
+Finds product design jobs that match your level, location and pay, and adds them to a spreadsheet or Notion. Run it once a week. If you want, it also drafts resume bullets and a cover letter opening for each job, based only on notes you write about your own experience.
 
 ```
 Status            Company   Title                            Location     Salary              Link
@@ -16,30 +14,28 @@ Applied           Initech   Design Manager, Platform         Remote - US  $200,0
 
 ## Who it's for
 
-- Product, UX and UI designers, from senior individual contributors to design leaders.
-- People who'd rather not check ten job sites every week.
-- No coding needed. You paste one line into Terminal once. After that, you double-click files.
+Product, UX and UI designers (the defaults lean toward senior and leadership roles) who'd rather not check a dozen job sites every week. You don't need to know how to code: you paste one line into Terminal to install it, and after that you double-click files.
 
 ## What it does each week
 
-1. **Finds jobs.** It searches Indeed, plus the careers pages of companies you name (any company whose jobs are hosted on Greenhouse, Lever or Ashby, which covers most tech companies).
-2. **Keeps the ones that fit.** Title, level, location, pay and posting date all have to match your settings. Every match comes with a one-line reason, so you can see why it was kept.
-3. **Skips repeats.** A job you've already seen is never added twice.
-4. **Adds them to your tracker**, with a tailored draft if you turned drafts on.
+1. Searches Indeed and the careers pages of companies you name. That works for any company that posts jobs on Greenhouse, Lever or Ashby, which most tech companies do.
+2. Keeps jobs whose title, level, location, pay and posting date match your settings, and notes why each one matched.
+3. Skips jobs already in your tracker.
+4. Adds the rest to your tracker, with a draft for each if you turned drafts on.
 
 ## What it won't do
 
-- **It won't apply for you.** You review each job and apply on the company's site.
-- **It won't email or message anyone.**
-- **It doesn't collect anything.** There are no accounts and no analytics. Your settings, notes, keys and tracker stay in a folder on your computer.
-- **It doesn't search LinkedIn,** because automated searching isn't allowed there. Keep a saved LinkedIn search and check it alongside this.
-- **It only searches US jobs for now** (pay is compared in US dollars).
+- It doesn't apply for you. You decide which jobs to apply to and apply on the company's site.
+- It doesn't email or message anyone.
+- It doesn't collect any data. There's no account and no analytics, and your settings, notes, keys and tracker stay in a folder on your computer.
+- It doesn't search LinkedIn, because LinkedIn doesn't allow automated searches. Set up a saved search on LinkedIn to cover it.
+- It only finds US jobs for now, and compares pay in US dollars.
 
 ## What you need
 
-- A **Mac**. Windows works too, with a few manual steps (see [For tinkerers](#for-tinkerers)).
-- **About 10 minutes.**
-- **It's free.** Optional extras: tailored drafts cost about 1–2 cents per job (paid to Anthropic). Adzuna and Notion are free.
+- A Mac. Windows works too, with a few manual steps (see [For tinkerers](#for-tinkerers)).
+- About 10 minutes to set up.
+- No money, unless you turn on drafts. Those cost about 1–2 cents per job, paid to Anthropic. The other extras (Adzuna and Notion) are free.
 
 ---
 
@@ -56,12 +52,12 @@ Applied           Initech   Design Manager, Platform         Remote - US  $200,0
    1. **Level:** senior individual contributor, leadership, both, or any.
    2. **Location:** your cities, and whether remote counts.
    3. **Pay:** your minimum per year.
-   4. **Companies:** names you'd love to work at. It looks up each one for you.
+   4. **Companies:** ones you want to work at. Type their names and it looks up their job pages.
    5. **Optional extras:** drafts, more listings, and Notion instead of a spreadsheet. Skip any of them.
 
 4. Say **yes** to "Run your first search now?" Your tracker opens with your first jobs.
 
-That's it. Your **job-search** folder (in your home folder) opens in Finder. Drag it to the Finder sidebar so it's easy to find later.
+Your **job-search** folder (in your home folder) then opens in Finder. Drag it to the Finder sidebar so it's easy to find later.
 
 <details>
 <summary><b>"Python 3.10 or newer isn't on your Mac yet"</b></summary>
@@ -78,7 +74,7 @@ Go to [python.org/downloads](https://www.python.org/downloads/), click the yello
 | **Preview Jobs** | Shows what would be added, without saving anything. Useful after you change your settings. |
 | **Set Up** | Asks the setup questions again. Your current answers are the defaults. |
 
-Then go through the new rows in your tracker. Open the link, decide, apply on the company's site, and update **Status**:
+Then go through the new rows in your tracker. When you apply, or decide not to, update **Status**:
 
 | Status | Meaning |
 |---|---|
@@ -95,7 +91,7 @@ Then go through the new rows in your tracker. Open the link, decide, apply on th
 - **Numbers** saves your edits as a separate `.numbers` file, and new jobs keep going to `applications.csv`. To keep everything in one place, use Excel or Google Sheets, or switch to Notion (run **Set Up** again).
 - **Close the spreadsheet before you run Find Jobs**, so its new rows don't get overwritten when you save.
 - Don't edit the **ID** column (the last one). It's how the tool recognizes jobs it has already added.
-- Drafts are also saved as text files in the `drafts` folder, for easy copying.
+- Drafts are also saved as text files in the `drafts` folder, which makes them easier to copy.
 </details>
 
 <details>
@@ -108,9 +104,9 @@ Right-click the file, choose **Open**, then click **Open** again. You only need 
 
 ## Change your search
 
-The easy way: double-click **Set Up** and answer the questions again.
+Double-click **Set Up** and answer the questions again.
 
-To fine-tune, right-click `config.yaml` in your job-search folder, choose **Open With → TextEdit**, and change the **YOUR SEARCH** section at the top:
+For finer changes, right-click `config.yaml` in your job-search folder, choose **Open With → TextEdit**, and change the **YOUR SEARCH** section at the top:
 
 | Setting | What it means |
 |---|---|
@@ -144,11 +140,11 @@ You can turn on any of these by running **Set Up** again.
 <details>
 <summary><b>Tailored drafts (about 1–2 cents per job)</b></summary>
 
-For every new job, it writes three resume bullets and a cover letter opening, using **only** what you've written in `portfolio_notes.md`. It never makes up experience.
+For every new job, it writes three resume bullets and a cover letter opening. It uses only what you've written in `portfolio_notes.md`, so it won't invent experience you don't have.
 
 1. Create an account at [console.anthropic.com](https://console.anthropic.com), add a few dollars of credit, then go to **API Keys → Create Key**.
 2. Run **Set Up** and paste the key when asked.
-3. Open `portfolio_notes.md` in your job-search folder (right-click → **Open With → TextEdit**) and replace the examples with your real experience: companies, what you led, results with numbers. The better your notes, the better the drafts.
+3. Open `portfolio_notes.md` in your job-search folder (right-click → **Open With → TextEdit**) and replace the examples with your real experience: companies, what you led, and results with numbers. Drafts can only be as specific as these notes.
 
 You can also change the drafts' writing rules under `writing_style` in `config.yaml`.
 </details>
@@ -184,13 +180,13 @@ Your settings may be too narrow. Try **Set Up** again with "Any level", more cit
 <details>
 <summary><b>A job showed up that clearly isn't a fit</b></summary>
 
-Each row's **Why it matched** column says which rule let it through. To block a word in titles, add it to `title_excludes` in `config.yaml` (in the advanced section).
+The **Why it matched** column shows which settings it matched. To block a word in titles, add it to `title_excludes` in `config.yaml` (in the advanced section).
 </details>
 
 <details>
 <summary><b>"[jobspy] error" in the output</b></summary>
 
-That's the Indeed search. Indeed sometimes changes its site or limits how often it can be searched. The rest of the run still works. Updating usually fixes it: paste the install line into Terminal again. It updates the code and keeps your settings, notes and tracker.
+The Indeed search failed. This happens when Indeed changes its site or limits how often it can be searched. The other sources still run. To fix it, update by pasting the install line into Terminal again. Your settings, notes and tracker are kept.
 </details>
 
 <details>
@@ -251,7 +247,7 @@ Everything in the first four rows is personal and is never uploaded (see `.gitig
 
 1. **Run the tests:** `venv/bin/pip install pytest` once, then `venv/bin/python -m pytest -q`. They check the title, level, location, date and pay rules against known examples. If you change a rule, add a test in `tests/test_sources.py`.
 2. **Preview against real jobs:** double-click **Preview Jobs**, open 3–5 of the links and confirm the title, location, pay and date really match.
-3. **Look at what's skipped, not just what's kept.** If one skip reason looks too high, open a few raw postings. Often a location is written differently than you expected (e.g. "NYC" vs "New York"), which is a quick fix in `locations`.
+3. **Check the skip counts.** If one reason looks too high, open a few raw postings. A common cause is a location written differently than you expected, such as "NYC" instead of "New York". Add the other spelling to `locations`.
 4. **Check company names:** `venv/bin/python engine/check_boards.py` checks every company in your settings and says which ones are on the wrong list or misspelled.
 </details>
 
@@ -267,4 +263,4 @@ Indeed search uses [JobSpy](https://github.com/speedyapply/JobSpy). Company job 
 
 ## License
 
-MIT. Use it, change it, share it.
+MIT
