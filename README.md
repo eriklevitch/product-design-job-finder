@@ -16,14 +16,14 @@ Applied           Initech   Design Manager, Platform         Remote - US  $200,0
 
 Product, UX and UI designers (the defaults lean toward senior and leadership roles) who'd rather not check a dozen job sites every week. You don't need to know how to code: you paste one line into Terminal to install it, and after that you double-click files.
 
-## What it does each week
+## What it does
 
 1. Searches Indeed and the careers pages of companies you name. That works for any company that posts jobs on Greenhouse, Lever or Ashby, which most tech companies do.
 2. Keeps jobs whose title, level, location, pay and posting date match your settings, and notes why each one matched.
 3. Skips jobs already in your tracker.
 4. Adds the rest to your tracker, with a draft for each if you turned drafts on.
 
-## What it won't do
+## What it doesn't do
 
 - It doesn't apply for you. You decide which jobs to apply to and apply on the company's site.
 - It doesn't email or message anyone.
@@ -39,7 +39,7 @@ Product, UX and UI designers (the defaults lean toward senior and leadership rol
 
 ---
 
-## Install
+## Installation
 
 1. Open **Terminal**: press **⌘ Command + Space**, type `Terminal`, press **Return**.
 2. Copy this line, paste it into Terminal, and press **Return**:
@@ -65,7 +65,7 @@ Your **job-search** folder (in your home folder) then opens in Finder. Drag it t
 Go to [python.org/downloads](https://www.python.org/downloads/), click the yellow **Download** button, open the downloaded file and click **Continue** until it's done. Then paste the install line again.
 </details>
 
-## Every week
+## Run every week (or as often as you'd like)
 
 | Double-click | What it does |
 |---|---|
@@ -102,7 +102,7 @@ Right-click the file, choose **Open**, then click **Open** again. You only need 
 
 ---
 
-## Change your search
+## Change your search criteria
 
 Double-click **Set Up** and answer the questions again.
 
@@ -133,7 +133,7 @@ Open the company's careers page and click any job. Look at the web address:
 If the address is anything else (for example, Workday or the company's own site), it can't be checked directly. Indeed will often still list their jobs.
 </details>
 
-## Optional extras
+## Extras (optional)
 
 You can turn on any of these by running **Set Up** again.
 
@@ -169,7 +169,7 @@ Paste the secret and the link when asked. Drafts appear inside each job's page.
 
 ---
 
-## Troubleshooting
+## Need help?
 
 <details>
 <summary><b>It found 0 matches</b></summary>
@@ -209,7 +209,7 @@ Drag the job-search folder to the Trash. Nothing else was installed.
 
 ---
 
-## For tinkerers
+## To fool around with
 
 <details>
 <summary><b>Manual install (Mac, Linux, Windows)</b></summary>
