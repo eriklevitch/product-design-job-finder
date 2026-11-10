@@ -14,22 +14,22 @@ Applied           Initech   Design Manager, Platform         Remote - US  $200,0
 
 ## Who it's for
 
-Product, UX and UI designers (the defaults lean toward senior and leadership roles) who'd rather not check a dozen job sites every week. You don't need to know how to code: you paste one line into Terminal to install it, and after that you double-click files.
+Product, UX and UI designers who do not want to check job sites every week. You don't need to know how to code: you paste one line into Terminal to install it, and after that you use some files. 
 
 ## What it does
 
-1. Searches Indeed and the careers pages of companies you name. That works for any company that posts jobs on Greenhouse, Lever or Ashby, which most tech companies do.
-2. Keeps jobs whose title, level, location, pay and posting date match your settings, and notes why each one matched.
+1. Searches Indeed and the careers pages of companies you provide. This works for any company that posts jobs on Greenhouse, Lever or Ashby, which most tech companies do.
+2. Keeps jobs whose title, level, location, pay and posting date match your configuration.
 3. Skips jobs already in your tracker.
-4. Adds the rest to your tracker, with a draft for each if you turned drafts on.
+4. Adds the rest to your tracker, with a draft for each (if you turned drafts on).
 
 ## What it doesn't do
 
-- It doesn't apply for you. You decide which jobs to apply to and apply on the company's site.
+- It doesn't apply for you. 
 - It doesn't email or message anyone.
-- It doesn't collect any data. There's no account and no analytics, and your settings, notes, keys and tracker stay in a folder on your computer.
-- It doesn't search LinkedIn, because LinkedIn doesn't allow automated searches. Set up a saved search on LinkedIn to cover it.
-- It only finds US jobs for now, and compares pay in US dollars.
+- It doesn't collect any data. There's no analytics. Your settings, notes, keys and tracker stay in a folder on your local drive.
+- It doesn't search LinkedIn because LinkedIn doesn't allow automated searches. 
+- It only finds US based jobs for now, and compares pay in US dollars.
 
 ## What you need
 
