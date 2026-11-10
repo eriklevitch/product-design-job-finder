@@ -1,0 +1,16 @@
+# Your personal files: these never leave your computer
+config.yaml
+portfolio_notes.md
+.env
+applications.csv
+drafts/
+
+# Installed software and caches
+venv/
+__pycache__/
+.pytest_cache/
+*.pyc
+
+# System and editor files
+.DS_Store
+.claude/settings.local.json

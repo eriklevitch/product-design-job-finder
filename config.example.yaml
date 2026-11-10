@@ -1,0 +1,160 @@
+# Job search settings.
+#
+# Set Up.command creates your own copy of this file, called config.yaml,
+# from your answers. You can also edit config.yaml by hand: open it in
+# TextEdit (or any text editor), change a line, save. Keep the format
+# exactly as you see it: words in "quotes", lists in [ square brackets ].
+# Then double-click Preview Jobs.command to check the results.
+
+# ════ YOUR SEARCH ═════════════════════════════════════════════════
+
+# A job title has to include at least one of these.
+title_keywords: ["product design", "ux", "ui designer", "experience designer", "interaction designer", "design manager", "manager, design", "head of design", "director of design", "director, design", "design director", "design lead", "vp of design", "vp, design", "vp design"]
+
+# A title also has to include one of these level words.
+# [] means any level.
+seniority_keywords: ["senior", "sr.", "sr ", "staff", "principal", "lead", "founding", "manager", "director", "head of", "vp"]
+
+# Places that count, matched against the job's location text.
+# Add "remote" to include remote jobs in the US. [] means anywhere.
+locations: ["remote"]
+
+# Where to point the big job sites (Indeed, and Adzuna if you add it).
+# A city like "Chicago, IL", or "United States".
+search_location: "United States"
+
+# Lowest acceptable pay per year, in US dollars, compared with the TOP of
+# the posted range. 0 means no minimum. Jobs that don't list pay are
+# always kept and marked "unlisted (check posting)".
+min_salary: 0
+
+# Skip postings older than this many days.
+max_posting_age_days: 30
+
+# Companies to check directly, by the name in their careers-page link:
+#   job-boards.greenhouse.io/NAME   -> greenhouse_companies
+#   jobs.lever.co/NAME              -> lever_companies
+#   jobs.ashbyhq.com/NAME           -> ashby_companies
+# Set Up.command finds these for you when you type company names.
+greenhouse_companies: []
+lever_companies: []
+ashby_companies: []
+
+# Where new jobs go: "spreadsheet" (applications.csv) or "notion".
+tracker: "spreadsheet"
+
+# How drafts describe you, e.g. "senior product designer".
+your_role: "product designer"
+
+# ════ ADVANCED (most people never need to change these) ═══════════
+
+# Skip titles containing any of these whole words.
+title_excludes:
+  - "junior"
+  - "jr."
+  - "intern"
+  - "internship"
+  - "early career"
+  - "new grad"
+  - "associate"
+  - "ux engineer"
+  - "design engineer"
+  - "software engineer"
+  - "frontend engineer"
+  - "front-end engineer"
+  - "researcher"
+  - "scientist"              # "Scientist, Drug Product Design"
+  - "project manager"
+  - "program manager"
+  - "software engineering"   # "Manager, Software Engineering - UX Platform"
+  - "engineering manager"
+  - "ux writer"
+  - "producer"
+  # Non-product "design" roles that "design manager"/"design lead" would catch
+  - "data center"
+  - "silicon"
+  - "hardware"
+  - "chip"
+  - "asic"
+  - "physical design"
+  - "interior"
+
+# Some companies leave the level out of titles ("Product Designer").
+# Such a job still counts if the top of its posted pay reaches this
+# amount. 0 turns this off.
+unleveled_min_salary: 0
+
+# Titles with these words skip the salary minimum (contract and
+# fractional work is often paid by the day or month).
+contract_keywords:
+  - "fractional"
+  - "contract"
+  - "contractor"
+  - "freelance"
+  - "consultant"
+  - "consulting"
+  - "interim"
+
+# "Remote" jobs that mention one of these (and not the US) are skipped,
+# e.g. "Remote - Canada".
+remote_excludes:
+  - "canada"
+  - "uk"
+  - "united kingdom"
+  - "london"
+  - "ireland"
+  - "eu"
+  - "europe"
+  - "emea"
+  - "germany"
+  - "france"
+  - "spain"
+  - "portugal"
+  - "netherlands"
+  - "poland"
+  - "latam"
+  - "mexico"
+  - "brazil"
+  - "argentina"
+  - "colombia"
+  - "india"
+  - "apac"
+  - "australia"
+  - "singapore"
+  - "japan"
+  - "israel"
+
+# Files (relative to this folder).
+spreadsheet_path: "applications.csv"
+portfolio_notes_path: "portfolio_notes.md"
+
+# Indeed, via the open-source jobspy library (no key needed). Glassdoor
+# and ZipRecruiter tend to block it, so they're off by default.
+jobspy:
+  sites: ["indeed"]
+  search_term: "product designer"
+  results_wanted: 40
+
+# Optional: Adzuna, more listings (free key, see README).
+adzuna:
+  app_id_env: "ADZUNA_APP_ID"
+  app_key_env: "ADZUNA_APP_KEY"
+  country: "us"
+  what: "product designer"
+
+# Optional: Notion tracker (keys live in .env, see README).
+notion:
+  token_env: "NOTION_TOKEN"
+  database_id_env: "NOTION_DATABASE_ID"
+
+# Optional: tailored drafts (key lives in .env, see README).
+anthropic:
+  api_key_env: "ANTHROPIC_API_KEY"
+  model: "claude-sonnet-5-5"
+
+# Rules the drafts follow. Add your own, one per line.
+writing_style:
+  - "Plain, first-person voice."
+  - "Active voice."
+  - "Direct and brief. Cut any sentence that doesn't carry information."
+  - "No stock phrases like \"I'm excited to\", \"passionate about\" or \"I believe I would be a great fit\"."
