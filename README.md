@@ -249,7 +249,7 @@ Everything in the first four rows is personal and is never uploaded (see `.gitig
 <details>
 <summary><b>Checking that the filtering is right</b></summary>
 
-1. **Run the tests:** `venv/bin/python -m pytest -q`. They check the title, level, location, date and pay rules against known examples. If you change a rule, add a test in `tests/test_sources.py`.
+1. **Run the tests:** `venv/bin/pip install pytest` once, then `venv/bin/python -m pytest -q`. They check the title, level, location, date and pay rules against known examples. If you change a rule, add a test in `tests/test_sources.py`.
 2. **Preview against real jobs:** double-click **Preview Jobs**, open 3–5 of the links and confirm the title, location, pay and date really match.
 3. **Look at what's skipped, not just what's kept.** If one skip reason looks too high, open a few raw postings. Often a location is written differently than you expected (e.g. "NYC" vs "New York"), which is a quick fix in `locations`.
 4. **Check company names:** `venv/bin/python engine/check_boards.py` checks every company in your settings and says which ones are on the wrong list or misspelled.

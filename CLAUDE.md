@@ -12,7 +12,7 @@ explanations plain and avoid jargon.
 - **Personal files** (`config.yaml`, `portfolio_notes.md`, `.env`,
   `applications.csv`, `drafts/`) are gitignored. Never commit them or paste
   their contents anywhere outside this computer.
-- **Tests:** `venv/bin/python -m pytest -q`. If you change filter rules,
+- **Tests:** `venv/bin/pip install pytest` (once), then `venv/bin/python -m pytest -q`. If you change filter rules,
   add a test in `tests/test_sources.py`.
 - **Company lists:** `venv/bin/python engine/check_boards.py` checks every
   company in `config.yaml` and says which ones are on the wrong list or
